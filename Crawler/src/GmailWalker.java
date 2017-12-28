@@ -17,7 +17,7 @@ public class GmailWalker {
 		
 		try {
 			props.load(new FileInputStream(
-					new File("C:\\Users\\Patrick\\Documents\\project\\project\\Crawler\\conf\\gmail.properties")));
+					new File("path")));
 			props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
 
 			Session session = Session.getDefaultInstance(props, null);
