@@ -8,13 +8,16 @@ import javax.mail.Store;
 
 public class GmailWalker {
 
-	public void openSession(String login, String pass) {
+	
+	public void crawler_mail(String ... args) {
 
 		Properties props = new Properties();
-
+		String login = args[0];
+		String pass = args[1];
+		
 		try {
 			props.load(new FileInputStream(
-					new File("/home/patrickhirata/Documents/project/Crawler/Conf/gmail.properties")));
+					new File("C:\\Users\\Patrick\\Documents\\project\\project\\Crawler\\conf\\gmail.properties")));
 			props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
 
 			Session session = Session.getDefaultInstance(props, null);
@@ -22,15 +25,20 @@ public class GmailWalker {
 			store.connect("smtp.gmail.com", login, pass);
 			Folder inbox = store.getFolder("inbox");
 			inbox.open(Folder.READ_ONLY);
-			int messageCount = inbox.getMessageCount();
-
+			
+			Message[] messages = inbox.getMessages();
+			
+			for(Message message: messages) {
+				System.out.println("Titulo: " + message.getSubject());
+				System.out.println("Email: " + message.getContent());
+			}
+			
+			inbox.close(true);
+			store.close();
+			
 		} catch (Exception e) {
 			System.err.println("Error: " + e.getMessage());
 		}
-	}
-
-	public void crawler() {
-
 	}
 
 }
