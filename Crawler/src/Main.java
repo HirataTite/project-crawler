@@ -17,6 +17,8 @@ public class Main {
 			String login = args[1];
 			String pass = args[2];
 			gw.crawler_mail(login, pass);
+		} else {
+			System.out.println("Comando Invalido");
 		}
 
 	}
