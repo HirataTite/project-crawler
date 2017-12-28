@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+		
+	public static void main(String[] args) {
+				
+		FileWalker fw = new FileWalker();
+		String path = args[0];
+		fw.walk(path);
+
+		
+		WebWalker ww = new WebWalker();
+		String url = args[0];
+		int depth = Integer.parseInt(args[1]);
+		ww.getPageLinks(url, depth);
+				
+	}	
+}
+
+

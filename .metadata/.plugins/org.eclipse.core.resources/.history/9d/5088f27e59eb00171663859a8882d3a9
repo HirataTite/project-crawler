@@ -1,0 +1,28 @@
+
+public class Main {
+	
+		
+	public static void main(String[] args) {
+			
+		
+        new ConsoleHelper().init(args);
+		
+		/*
+		if(args[0] == "file") {
+			FileWalker fw = new FileWalker();
+			String path = args[0];
+			fw.walk(path);	
+		} 
+		
+		/*
+		else if(args[0] == "web") {
+			WebWalker ww = new WebWalker();
+			String url = args[0];
+			int depth = Integer.parseInt(args[1]);
+			ww.getPageLinks(url, depth);
+		} */
+					
+	}	
+}
+
+

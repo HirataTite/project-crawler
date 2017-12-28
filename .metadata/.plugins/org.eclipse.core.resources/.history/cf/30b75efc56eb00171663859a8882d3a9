@@ -1,0 +1,24 @@
+
+import 
+
+
+public class ConsoleHelper {
+
+
+    public void init(String ... args) {
+
+        if (args == null || args.length < 2) {
+            throw new ParametrosInsuficientesException();
+        }
+
+        TipoCrawler tipoCrawler = TipoCrawler.from(args[0]);
+
+        if (tipoCrawler == null) {
+            throw new TipoInvalidoException();
+        }
+
+        tipoCrawler.execute((String[]) ArrayUtils.remove(args, 0));
+
+    }
+	
+}

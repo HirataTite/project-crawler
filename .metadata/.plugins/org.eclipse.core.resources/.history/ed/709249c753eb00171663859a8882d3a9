@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+		
+	public static void main(String[] args) {
+		//TO-DO implementar entrada com sysout para o path
+		//implementar um switch-case para escolher a opção de crawler desejada
+		Scanner in = new Scanner(System.in);
+		FileWalker fw = new FileWalker();
+		WebWalker ww = new WebWalker();
+		
+		String path = args[0];
+		fw.walk(path);	
+		
+		
+		//ww.getPageLinks(url, depth);
+				
+	}	
+}
+
+

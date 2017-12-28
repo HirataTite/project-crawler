@@ -1,0 +1,18 @@
+
+
+public class Main {
+
+    private static final int MAX_DEPTH = 2;
+
+	
+	public static void main(String[] args) {
+		//implementar entrada com sysout para o path
+		FileWalker fw = new FileWalker();
+		WebWalker ww = new WebWalker();
+		
+		ww.getPageLinks("");
+		fw.walk("/home/patrickhirata/");
+		
+	}
+
+}

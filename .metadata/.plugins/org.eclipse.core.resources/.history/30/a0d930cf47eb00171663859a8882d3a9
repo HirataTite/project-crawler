@@ -1,0 +1,40 @@
+import java.util.Scanner; 
+
+public class Main {
+
+
+	public static void main(String[] args) {
+		//implementar entrada com sysout para o path
+		//implementar um switch-case para escolher a opção de crawler desejada
+		Scanner in = new Scanner(System.in);
+		FileWalker fw = new FileWalker();
+		WebWalker ww = new WebWalker();
+		
+		System.out.println("Preencher abaixo: (URL, Profundidade, Path)");
+		System.out.println("URL: ");
+		String url = in.nextLine();
+		System.out.println("Profundidade: ");
+		int depth = in.nextInt();
+		
+		ww.getPageLinks(url, depth);
+		//fw.walk("/home/patrickhirata/");
+		
+		System.out.println("============================");
+		System.out.println("Escolha uma das Opcoes abaixo:\n");
+		System.out.println("1- Crawler de algum diretorio\n");
+		System.out.println("2- Crawler de alguma web page\n");
+		System.out.println("============================");
+		
+		int number;
+		switch(number) {
+		
+		case 1:
+			
+	
+		
+		}
+	
+	}
+
+}
+

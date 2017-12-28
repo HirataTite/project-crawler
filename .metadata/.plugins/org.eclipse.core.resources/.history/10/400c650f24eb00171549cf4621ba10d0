@@ -1,0 +1,23 @@
+import java.util.Scanner; 
+
+public class Main {
+
+
+	public static void main(String[] args) {
+		//implementar entrada com sysout para o path
+		Scanner in = new Scanner(System.in);
+		FileWalker fw = new FileWalker();
+		WebWalker ww = new WebWalker();
+		
+		System.out.println("Preencher abaixo: (URL, Profundidade, Path)");
+		System.out.println("URL: ");
+		String url = in.nextLine();
+		System.out.println("Profundidade: ");
+		int depth = in.nextInt();
+		
+		ww.getPageLinks(url, depth);
+		//fw.walk("/home/patrickhirata/");
+		
+	}
+
+}

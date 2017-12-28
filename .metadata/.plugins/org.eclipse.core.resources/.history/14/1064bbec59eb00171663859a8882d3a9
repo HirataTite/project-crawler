@@ -1,0 +1,43 @@
+
+
+public enum TipoCrawler {
+
+    ARQUIVOS("arquivos") {
+        @Override
+        public void execute(String ... args) {
+            new FileWalker().walk(args);
+        }
+    },
+    /*GMAIL("gmail") {
+        @Override
+        public void execute(String ... args) {
+            new GmailCrawlerImpl().start(args);
+        }
+    },*/
+    WEB("web") {
+        @Override
+        public void execute(String ... args) {
+            new WebWalker().getPageLinks(args);
+        }
+    };
+
+    private String type;
+
+    TipoCrawler(String type) {
+        this.type = type;
+    }
+
+
+    public static TipoCrawler from(String type) {
+        for (TipoCrawler tipoCrawler : TipoCrawler.values()) {
+            if (tipoCrawler.type.equalsIgnoreCase(type)) {
+                return tipoCrawler;
+            }
+        }
+
+        return null;
+    }
+
+
+    public abstract void execute(String ... args);
+}

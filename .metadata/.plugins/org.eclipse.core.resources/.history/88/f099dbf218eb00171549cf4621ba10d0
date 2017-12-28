@@ -1,0 +1,29 @@
+import java.io.IOException;
+import java.util.HashSet;
+
+
+public class WebWalker {
+
+	private HashSet<String> links = new HashSet<String>();
+	
+	public void getPageLinks(String URL) {
+		
+		/*
+		if(!links.contains(URL)) {
+		
+			try {
+				if(links.add(URL));
+				System.out.println(URL);
+				
+			
+			
+			
+			} catch(IOException e) {
+				System.err.println("Erro: " + e.getMessage());
+			}
+		}
+		*/	
+		
+		
+	}
+}

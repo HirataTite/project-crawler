@@ -1,0 +1,9 @@
+
+public class GmailWalker {
+
+	
+	public void openSession(String login, String pass) {
+		
+		
+	}
+}

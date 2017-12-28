@@ -1,0 +1,13 @@
+import java.util.HashSet;
+
+
+public class WebWalker {
+
+	private HashSet<String> links = new HashSet<String>();
+	
+	public void getPageLinks(String URL) {
+	
+	
+		
+	}
+}

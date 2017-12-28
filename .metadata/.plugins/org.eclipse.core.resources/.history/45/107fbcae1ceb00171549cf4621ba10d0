@@ -1,0 +1,12 @@
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		//implementar entrada com sysout para o path
+		FileWalker fw = new FileWalker();
+		fw.walk("/home/patrickhirata/");
+		
+	}
+
+}
